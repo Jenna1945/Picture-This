@@ -11,11 +11,53 @@
 
 <body>
   <header class="header">
+
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+  <section>
+    <img 
+    srcset="
+    museum-320_x_180.jpg 320w, 
+    museum-480_x_270.jpg 480w, 
+    museum-640_x_360.jpg 640w, 
+    museum-720_x_405.jpg 720w,
+    museum-960_x_540.jpg 960w,
+    musuem-1440_x_810.jpg 1440w,
+    museum-1920_x_1080.jpg 1920w,
+    musuem-2160_x_1215.jpg 2160w, 
+    musuem-2880_x_1621.jpg 2880w
+    "
+    src="images/museum.jpg" alt="placeholder">
+
+  </section>
+
+  <section>
+    <img srcset="
+    images/museum-480_x_480,
+    images/museum-640_x_640,
+    images/museum-800_x_800 2x,
+    images/museum-960_x_960 2x,
+    images/museum-1280_x_1280 2x,
+    images/museum-1440_x_1440 2x,
+    images/museum-1600_x_1600 3x,
+    images/museum-1920_x_1920 3x,
+    images/museum-2400_x_2400 3x
+    "
+    src="images/museum-1440_x_1440.jpg" alt="museum square">
+  </section>
+  <section>
+    <picture>
+
+      <source srcset="
+      images/museum-320_x_180.jpg 1x,
+      images/museum-640_x_360.jpg 2x,
+      images/museum-960_x_540.jpg 3x" media="(max-width: 320px)">
+      
+      <img src="images/museum-1440_x_810.jpg" alt="museum">
+    </picture>
+  </section>
 
   </header>
 </body>
